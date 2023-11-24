@@ -1,0 +1,17 @@
+
+html{
+    height: 100%;
+}
+
+#root{
+    position: relative;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+
+
+}
