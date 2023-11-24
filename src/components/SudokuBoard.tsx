@@ -48,7 +48,6 @@ const SudokuBoardParent = styled.div`
     
     box-sizing: border-box;
     border: 4px solid ${props => props.theme.colors.BEIGE.MEDIUM};
-    font-family: 'Arial', Helvetica, sans-serif;
 `
 
 

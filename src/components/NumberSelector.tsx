@@ -50,30 +50,16 @@ const NumberSelectorButton = styled.button`
     border-radius: 20px;
     aspect-ratio: 1;
     font-size: 2rem;
-    color: ${props=>props.theme.colors.BEIGE.DARK};
-    justify-content: center;
-    align-items: center;
-    background-color: ${props=>props.theme.colors.BEIGE.BASE};
-    border: 2px solid ${props=>props.theme.colors.BEIGE.DARK};
     padding: 0px;
-    -webkit-user-select: none;
-    user-select:none;
-    transition: background-color 0.2s ease;
+
 
     p{
         margin: 0;
     }
-    &:disabled{
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
+    
     &.current{
         background-color: white;
         color: ${props=>props.theme.colors.GREEN};;
     }
-    &:not([disabled]){
-        &:active{
-            background-color: #a3a3a3
-        }
-    }
+
 `

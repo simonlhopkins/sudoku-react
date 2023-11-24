@@ -43,7 +43,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
 
-      <h1>mistakes: {gameState.score}</h1>
+      {/* <h1>mistakes: {gameState.score}</h1> */}
+      <GameHeader>sudoku for amber</GameHeader>
       <GameWrapper>
         <SudokuBoard
           populatedBoard={puzzleToRender}
@@ -59,6 +60,7 @@ function App() {
           toggleNotes= {()=>{setTakeNotes(prev=>!prev)}}
           showSolved = {()=>{setShowSolved(prev=>!prev)}}
           notesActive = {takeNotes}
+          canUndo = {gameState.history.length>0}
         />
         {
           !showSolved && <NumberSelector
@@ -69,7 +71,7 @@ function App() {
           />
 
         }
-        <ul>{gameState.history.map((item, i) => (<li key={i}>{`${item.index} changed from ${item.prevValue} to ${item.newValue}`}</li>))}</ul>
+        {/* <ul>{gameState.history.map((item, i) => (<li key={i}>{`${item.index} changed from ${item.prevValue} to ${item.newValue}`}</li>))}</ul> */}
       </GameWrapper>
 
 
@@ -82,8 +84,12 @@ const GameWrapper = styled.div`
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
+  gap: 0.2rem;
+`
+
+const GameHeader = styled.h1`
+  color: ${props=>props.theme.colors.BEIGE.DARK}
 `
 
 export default App
