@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import SudokuSquare from "./SudokuSquare";
 import { SudokuSectionCoord, getIndexiesInSection, getSudokuBoardCoordFromIndex, getSudokuSectionCoordFromIndex } from "../util/Util";
-import { NotesArray, NotesMap } from "../util/gamestate";
+import { NotesMap } from "../util/gamestate";
 
 
 interface SudokuSectionProps {

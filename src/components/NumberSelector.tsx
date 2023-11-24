@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-import DeleteLeftSolid from '../assets/delete-left-solid.svg?react';
-
 interface NumberSelectorProps{
     onClicked: (num:number|null)=>void,
     currentIndexSolved: boolean
